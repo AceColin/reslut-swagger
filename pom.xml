@@ -22,6 +22,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- 开启热部署-1 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -38,6 +39,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 集成Swagger3 -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.5.9</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -46,6 +53,10 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <!-- 开启热部署-2 -->
+                    <fork>true</fork>
+                    <!-- 开启热部署-3-IDEA配置：Settings > … > Compiler，勾选“Build Project automatically” -->
+                    <!-- 开启热部署-4-IDEA配置：ctrl + shift + alt + /（快捷键），选择“Registry”，勾选“Compiler autoMake allow when app running” -->
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
