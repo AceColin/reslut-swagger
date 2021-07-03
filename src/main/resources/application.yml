@@ -1,7 +1,7 @@
 # swagger\u914D\u7F6E
 springdoc:
   version: '1.0.0'
-  packagesToScan: com.ace.functions.controller # \u5305\u626B\u63CF\u8DEF\u5F84
+  packagesToScan: com.ace.reslutswagger.controller # \u5305\u626B\u63CF\u8DEF\u5F84
   swagger-ui:
     path: /swagger-ui.html # swagger-ui\u8BBF\u95EE\u8DEF\u5F84 http://ip:\u7AEF\u53E3/swagger-ui.html
     csrf:
@@ -17,4 +17,4 @@ springdoc:
     - group: account
       paths-to-match: /accountTbl/**
     - group: functions
-      packages-to-scan: com.ace.functions.controller
+      packages-to-scan: com.ace.reslutswagger.controller
